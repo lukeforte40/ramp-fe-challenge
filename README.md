@@ -109,7 +109,7 @@ We don't have a real API for this challenge, so we added some utilities to simul
 
 **Actual:** The page crashes
 
-**Fix:** modified the utils/constants.ts file to have an id of "null" not ""
+**Fix:** modified the utils/constants.ts file to have an id of "null" not "" also adding a branch condition to the employee dropdown where if the all employees null id is seen fetch all transactions.
 
 # Bug 4: Clicking on View More button not showing correct data
 
@@ -121,6 +121,8 @@ We don't have a real API for this challenge, so we added some utilities to simul
 **Expected:** Initial transactions plus new transactions are shown on the page
 
 **Actual:** New transactions replace initial transactions, losing initial transactions
+
+**Fix:** 
 
 # Bug 5: Employees filter not available during loading more data
 
@@ -138,6 +140,8 @@ _This bug has 2 wrong behaviors that will be fixed with the same solution_
 
 **Actual:** The filter stops showing "Loading employees.." until `paginatedTransactions` is succeeded
 
+**Fix:** 
+
 ##### Part 2
 
 **How to reproduce:**
@@ -149,6 +153,8 @@ _This bug has 2 wrong behaviors that will be fixed with the same solution_
 **Expected:** The employees filter should not show "Loading employees..." after clicking **View more**, as employees are already loaded
 
 **Actual:** The employees filter shows "Loading employees..." after clicking **View more** until new transactions are loaded.
+
+**Fix:** 
 
 # Bug 6: View more button not working as expected
 
@@ -166,6 +172,8 @@ _This bug has 2 wrong behaviors that can be fixed with the same solution. It's a
 
 **Actual:** The **View more** button is visible even when transactions are filtered by employee. _You can even click **View more** button and get an unexpected result_
 
+**Fix:** 
+
 ##### Part 2
 
 **How to reproduce:**
@@ -177,6 +185,8 @@ _This bug has 2 wrong behaviors that can be fixed with the same solution. It's a
 **Expected:** When you reach the end of the data, the **View More** button disappears and you are not able to request more data.
 
 **Actual:** When you reach the end of the data, the **View More** button is still showing and you are still able to click the button. If you click it, the page crashes.
+
+**Fix:** 
 
 # Bug 7: Approving a transaction won't persist the new value
 
@@ -196,6 +206,8 @@ _You need to fix some of the previous bugs in order to reproduce_
 **Expected:** In steps 6 and 8, toggled transaction kept the same value it was given in step 2 _(E.g. Social Media Ads Inc is unchecked)_
 
 **Actual:** In steps 6 and 8, toggled transaction lost the value given in step 2. _(E.g. Social Media Ads Inc is checked again)_
+
+**Fix:** 
 
 ## Submission
 
