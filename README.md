@@ -94,6 +94,8 @@ We don't have a real API for this challenge, so we added some utilities to simul
 
 **Actual:** Nothing happens
 
+**Fix:** added useState of isChecked and an onclick function to the label in inputCheckbox/index.tsx file
+
 # Bug 3: Cannot select _All Employees_ after selecting an employee
 
 **How to reproduce:**
