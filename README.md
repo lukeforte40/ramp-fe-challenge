@@ -109,7 +109,7 @@ We don't have a real API for this challenge, so we added some utilities to simul
 
 **Actual:** The page crashes
 
-**Fix:** modified the utils/constants.ts file to have an id of "null" not "" also adding a branch condition to the employee dropdown where if the all employees null id is seen fetch all transactions.
+**Fix:** modified the utils/constants.ts file to have an id of "null" not "" also adding a branch condition to the employee dropdown where if the all employees null id is seen fetch all transactions
 
 # Bug 4: Clicking on View More button not showing correct data
 
@@ -122,7 +122,7 @@ We don't have a real API for this challenge, so we added some utilities to simul
 
 **Actual:** New transactions replace initial transactions, losing initial transactions
 
-**Fix:** 
+**Fix:** modified the function used to load the next "page" of data so that it preserves the previous pages data as well, also disabled the button to view more one there was not another page of data to load by adding a last page state to the paginatedTransactions page.
 
 # Bug 5: Employees filter not available during loading more data
 

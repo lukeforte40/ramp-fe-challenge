@@ -80,7 +80,7 @@ export function App() {
           {transactions !== null && (
             <button
               className="RampButton"
-              disabled={paginatedTransactionsUtils.loading}
+              disabled={paginatedTransactionsUtils.loading || paginatedTransactionsUtils.lastPage}
               onClick={async () => {
                 await loadAllTransactions()
               }}
