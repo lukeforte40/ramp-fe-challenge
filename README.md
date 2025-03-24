@@ -140,8 +140,6 @@ _This bug has 2 wrong behaviors that will be fixed with the same solution_
 
 **Actual:** The filter stops showing "Loading employees.." until `paginatedTransactions` is succeeded
 
-**Fix:** 
-
 ##### Part 2
 
 **How to reproduce:**
@@ -154,7 +152,7 @@ _This bug has 2 wrong behaviors that will be fixed with the same solution_
 
 **Actual:** The employees filter shows "Loading employees..." after clicking **View more** until new transactions are loaded.
 
-**Fix:** 
+**Fix:** relocated the setIsLoading(false) allocation to ahead of the call to load transactions so that when the employee menu will display as soon as its done loading instead of waiting for transactions
 
 # Bug 6: View more button not working as expected
 
