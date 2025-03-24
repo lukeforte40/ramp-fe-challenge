@@ -109,6 +109,8 @@ We don't have a real API for this challenge, so we added some utilities to simul
 
 **Actual:** The page crashes
 
+**Fix:** modified the utils/constants.ts file to have an id of "null" not ""
+
 # Bug 4: Clicking on View More button not showing correct data
 
 **How to reproduce:**
