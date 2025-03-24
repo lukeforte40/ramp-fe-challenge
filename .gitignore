@@ -1,0 +1,4 @@
+/.env
+/.prettierrc.json
+/email.txt
+/node_modules
