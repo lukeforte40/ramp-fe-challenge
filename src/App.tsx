@@ -24,7 +24,7 @@ export function App() {
     transactionsByEmployeeUtils.invalidateData()
 
     await employeeUtils.fetchAll()
-    
+
     setIsLoading(false)
 
     await paginatedTransactionsUtils.fetchAll()
@@ -73,16 +73,15 @@ export function App() {
             await loadTransactionsByEmployee(newValue.id)
           }}
         />
-
         <div className="RampBreak--l" />
 
         <div className="RampGrid">
           <Transactions transactions={transactions} />
 
-          {transactions !== null && (
+          {transactions !== null && paginatedTransactions?.nextPage !== null && transactionsByEmployee === null && (
             <button
               className="RampButton"
-              disabled={paginatedTransactionsUtils.loading || paginatedTransactionsUtils.lastPage}
+              disabled={paginatedTransactionsUtils.loading}
               onClick={async () => {
                 await loadAllTransactions()
               }}
