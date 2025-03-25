@@ -203,7 +203,7 @@ _You need to fix some of the previous bugs in order to reproduce_
 
 **Actual:** In steps 6 and 8, toggled transaction lost the value given in step 2. _(E.g. Social Media Ads Inc is checked again)_
 
-**Fix:** 
+**Fix:** Modified the usePaginatedTransactions and useTransactionsByEmployee to not cache their calls to the api ensuring the data will remain persistent
 
 ## Submission
 
