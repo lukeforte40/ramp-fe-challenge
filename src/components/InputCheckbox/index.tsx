@@ -1,14 +1,21 @@
 import classNames from "classnames"
-import { useRef,useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import { InputCheckboxComponent } from "./types"
 
 export const InputCheckbox: InputCheckboxComponent = ({ id, checked = false, disabled, onChange }) => {
   const { current: inputId } = useRef(`RampInputCheckbox-${id}`)
   const [isChecked, setIsChecked] = useState(checked);
   const handleLabelClick = () =>{
-    setIsChecked(!isChecked);
+    setIsChecked((prevState) => !prevState);
   }
 
+  useEffect(() => {
+    if (onChange) {
+      console.log("test");
+      onChange(isChecked); // Notify parent component of the state change
+    }
+  }, [isChecked]);
+  
   return (
     <div className="RampInputCheckbox--container" data-testid={inputId}>
       <label
@@ -24,7 +31,7 @@ export const InputCheckbox: InputCheckboxComponent = ({ id, checked = false, dis
         className="RampInputCheckbox--input"
         checked={isChecked}
         disabled={disabled}
-        onChange={() => onChange(!checked)}
+        onChange={() => console.log("test")}
       />
     </div>
   )
